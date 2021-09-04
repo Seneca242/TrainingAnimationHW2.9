@@ -1,24 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrainingAnimationHW2_9" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PE2-05-dmX" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="40" y="74" width="334" height="250"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwr-au-9uF">
+                                        <rect key="frame" x="5" y="5" width="324" height="240"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Kwr-au-9uF" secondAttribute="bottom" constant="5" id="952-9G-ue9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kwr-au-9uF" secondAttribute="trailing" constant="5" id="BYq-Ww-EmQ"/>
+                                    <constraint firstItem="Kwr-au-9uF" firstAttribute="top" secondItem="PE2-05-dmX" secondAttribute="top" constant="5" id="Hmq-y4-onP"/>
+                                    <constraint firstAttribute="height" constant="250" id="n45-2J-MYV"/>
+                                    <constraint firstItem="Kwr-au-9uF" firstAttribute="leading" secondItem="PE2-05-dmX" secondAttribute="leading" constant="5" id="vFe-sy-Beh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-vl-h9m">
+                                <rect key="frame" x="40" y="750" width="334" height="30"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="runButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mhf-Xx-8Gi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PE2-05-dmX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="C4s-G2-Y6R"/>
+                            <constraint firstItem="3a1-vl-h9m" firstAttribute="width" secondItem="PE2-05-dmX" secondAttribute="width" id="MJJ-X3-l5P"/>
+                            <constraint firstItem="PE2-05-dmX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MW6-E3-Oti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3a1-vl-h9m" secondAttribute="bottom" constant="82" id="VPq-tM-UOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PE2-05-dmX" secondAttribute="trailing" constant="40" id="Y8r-hL-3cG"/>
+                            <constraint firstItem="PE2-05-dmX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tQg-qM-Ukb"/>
+                            <constraint firstItem="3a1-vl-h9m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y3C-73-G7b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoDisplayLabel" destination="Kwr-au-9uF" id="pYT-dt-fmB"/>
+                        <outlet property="springView" destination="PE2-05-dmX" id="DS6-AG-zt9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
